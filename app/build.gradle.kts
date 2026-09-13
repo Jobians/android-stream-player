@@ -15,6 +15,24 @@ android {
     applicationId = "dev.jt.streamplayer"
   }
 
+  signingConfigs {
+    getByName("debug") {
+      val customKeystore = file("../keystore/debug.keystore")
+      if (customKeystore.exists()) {
+        storeFile = customKeystore
+        storePassword = "android"
+        keyAlias = "androiddebugkey"
+        keyPassword = "android"
+      }
+    }
+  }
+
+  buildTypes {
+    release {
+      signingConfig = signingConfigs.getByName("debug")
+    }
+  }
+
   compileOptions {
     sourceCompatibility = JavaVersion.VERSION_21
     targetCompatibility = JavaVersion.VERSION_21
