@@ -52,7 +52,7 @@ jobs:
           fi
 
       - name: Build All APKs (Debug & Release)
-        run: ./gradlew assemble
+        run: ./gradlew assemble --stacktrace
 
       - name: Upload Compiled APKs
         uses: actions/upload-artifact@v4
