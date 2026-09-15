@@ -46,10 +46,20 @@ kotlin {
 }
 
 dependencies {
-  implementation(libs.media3.ui)
-  implementation(libs.media3.exoplayer)
-  implementation(libs.media3.extractor)
+  // AndroidX Media / Media3
+  implementation(files("libs/lib-ui-release.aar"))
+  implementation(files("libs/lib-common-release.aar"))
+  implementation(files("libs/lib-container-release.aar"))
+  implementation(files("libs/lib-datasource-release.aar"))
+  implementation(files("libs/lib-database-release.aar"))
+  implementation(files("libs/lib-decoder-release.aar"))
+  implementation(files("libs/lib-extractor-release.aar"))
+  implementation(files("libs/lib-exoplayer-release.aar"))
+  implementation(files("libs/lib-exoplayer-rtsp-release.aar"))
+  
+  implementation("com.google.guava:guava:33.7.1-android")
+  implementation("androidx.recyclerview:recyclerview:1.4.0")
+
   implementation(libs.androidx.appcompat)
-  implementation(libs.media3.exoplayer.rtsp)
   implementation(libs.androidx.constraintlayout)
 }
