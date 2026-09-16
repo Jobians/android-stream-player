@@ -69,10 +69,10 @@ class MainActivity : AppCompatActivity() {
     private const val KEY_REPEAT_MODE = "repeat_mode"
     private const val KEY_RESIZE_MODE = "resize_mode"
 
-    private const val DEFAULT_MIN_BUFFER = 15000
-    private const val DEFAULT_MAX_BUFFER = 30000
-    private const val DEFAULT_BUFFER_PLAYBACK = 2500
-    private const val DEFAULT_BUFFER_PLAYBACK_REBUFFER = 5000
+    private const val DEFAULT_MIN_BUFFER = 1000
+    private const val DEFAULT_MAX_BUFFER = 5000
+    private const val DEFAULT_BUFFER_PLAYBACK = 250
+    private const val DEFAULT_BUFFER_PLAYBACK_REBUFFER = 500
     private const val DEFAULT_LIVE_OFFSET = 0L
     private const val DEFAULT_FORCE_TCP = true
     private const val DEFAULT_REPEAT_MODE = Player.REPEAT_MODE_OFF
